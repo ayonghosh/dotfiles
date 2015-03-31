@@ -1,0 +1,20 @@
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	sl = stash list
+	sa = stash apply
+	sd = stash drop
+	changed = show --pretty=\"format:\" --name-only
+[core]
+	quotepath = false
+[user]
+	name = Ayon Ghosh
+	email = ayonghosh88@gmail.com
+[color]
+	ui = true
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
