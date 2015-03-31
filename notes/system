@@ -29,3 +29,15 @@ MySQL5.5 and 5.6 difference
 so replace all STATS_PERSISTENT=0 with blank
 
 
+==
+
+$ echo "hello world" | mail -s "a subject" someone@somewhere.com
+
+echo "This will go into the body of the mail." | mail -s "Hello world" you@youremail.com
+
+mail -s "Hello world" you@youremailid.com < /home/calvin/application.log
+
+echo "Sending an attachment." | mutt -a file.zip -s "attachment" target@email.com
+
+
+==
