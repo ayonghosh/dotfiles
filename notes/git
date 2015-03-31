@@ -1,3 +1,48 @@
 To view only file names modified in a commit:
 git diff-tree --no-commit-id --name-only -r bd61ad98
 
+
+git checkout --orphan branchname
+git rm -rf .
+git pull origin remotebranch
+
+
+List all authors of a particular git project
+  Terminal - List all authors of a particular git project
+git log --format='%aN' | sort -u
+2010-01-07 18:55:21
+User: jedahan
+Functions: sort
+13
+Up
+Down
+List all authors of a particular git project
+This should work even if the output format changes.
+Add to favourites | Report as malicious
+Alternatives
+There are 2 alternatives - vote for the best!
+Terminal - Alternatives
+git shortlog -s | cut -c8-
+2010-01-07 18:04:01
+User: jedahan
+Functions: cut
+Tags: git
+3
+Up
+Down
+List all authors of a particular git project
+List everyone who committed to a particular project, listed alphabetically. To list by commits, add -n to the shortlog.
+Show sample output | Comments (1) | Add to favourites | Report as malicious
+
+2010-07-19 11:40:52
+User: chrisjkirkham
+Functions: awk cut sort
+Tags: git
+2
+Up
+Down
+List all authors of a particular git project
+Gets the authors, sorts by number of commits (as a vague way of estimating how much of the project is their work, i.e. the higher in the list, the more they've done) and then outputs the results.
+Show sample output | Comments (2) | Add to favourites | Report as malicious
+
+
