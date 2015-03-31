@@ -1,0 +1,25 @@
+inline-block fix in IE7:
+
+display: inline-block;
+*display: inline;
+zoom: 1;
+
+
+padding & margin:
+top right bottom left
+top left-and-right bottom
+top-and-bottom left-and-right
+
+
+font: font-style font-variant font-weight font-size/line-height font-family
+font: font-style font-variant font-size/line-height font-family
+font: font-style font-size/line-height font-family
+font-variant example: small-caps
+
+IE height bug
+div{
+    overflow:hidden;
+    min-height:0;
+    display: inline;   
+}
+
