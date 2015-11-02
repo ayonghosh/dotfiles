@@ -24,3 +24,26 @@ function gitch() {
   git diff-tree --no-commit-id --name-only -r ${COMMITID}
 }
 alias gitch='gitch'
+
+# Rietveld Code review tool
+alias cr='path/to/upload.py'
+
+function code_review() {
+  CHANGED_FILES_LIST=" "
+  while read -r FILE; do
+    CHANGED_FILES_LIST="${CHANGED_FILES_LIST} ${FILE}"
+  done  < <(gitch)
+#  cr --rev=master --oauth2 --no_oauth2_webbrowser $CHANGED_FILES_LIST
+  cr --rev=master $CHANGED_FILES_LIST
+}
+alias crev='(cd /path/to/repo && code_review)'
+
+function code_review_update() {
+  CHANGED_FILES_LIST=" "
+  while read -r FILE; do
+    CHANGED_FILES_LIST="${CHANGED_FILES_LIST} ${FILE}"
+  done  < <(gitch)
+#  cr --rev=master $CHANGED_FILES_LIST -i $1 --oauth2 --no_oauth2_webbrowser
+  cr --rev=master $CHANGED_FILES_LIST -i $1
+}
+alias crevu='code_review_update $1'
