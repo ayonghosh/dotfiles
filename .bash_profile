@@ -47,3 +47,6 @@ function code_review_update() {
   cr --rev=master $CHANGED_FILES_LIST -i $1
 }
 alias crevu='code_review_update $1'
+
+# Log Bash history
+export PROMPT_COMMAND='if [ "$(id -u)" -ne 0 ]; then echo "$(date "+%Y-%m-%d.%H:%M:%S") $(pwd) $(history 1)" >> ~/.logs/bash-history-$(date "+%Y-%m-%d").log; fi'
